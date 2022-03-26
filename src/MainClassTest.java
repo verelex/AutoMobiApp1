@@ -13,4 +13,13 @@ public class MainClassTest {
         System.out.println(tmp);
         Assert.assertTrue("меньше или равно 45", tmp > 45);
     }
+    @Test
+    public void testGetClassString(){
+        MainClass mc = new MainClass();
+        String tmp = mc.getClassString();
+        System.out.println(tmp);
+        int index1 = tmp.lastIndexOf("hello");
+        int index2 = tmp.lastIndexOf("Hello");
+        Assert.assertTrue("нет подстроки hello или Hello",index1 != -1 || index2 != -1);
+    }
 }
